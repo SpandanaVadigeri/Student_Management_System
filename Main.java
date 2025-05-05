@@ -41,6 +41,7 @@ public class Main {
         } while (choice != 5); 
     } 
 
+ add-student
     static void addStudent() { 
         System.out.print("Enter Student ID: "); 
         int id = sc.nextInt(); 
@@ -54,4 +55,24 @@ public class Main {
  
         students.add(new Student(id, name, grade)); 
         System.out.println("Student added successfully."); 
+ }
+    public class Student { 
+        private int id; 
+        private String name; 
+        private String grade; 
+     
+        public Student(int id, String name, String grade) { 
+            this.id = id; 
+            this.name = name; 
+            this.grade = grade; 
+        } 
+     
+        public int getId() { return id; } 
+        public String getName() { return name; } 
+        public String getGrade() { return grade; } 
+     
+        @Override 
+        public String toString() { 
+            return "ID: " + id + ", Name: " + name + ", Grade: " + grade; 
+        } main
     } 
